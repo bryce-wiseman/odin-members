@@ -1,0 +1,20 @@
+<div id="posts-box">
+    <% posts.forEach((post) => { %>
+        <div class="post">
+            <h3 class="title"><%= post.title %></h3>
+            <p class="content"><%= post.content %></p>
+            <% if(user) { %>
+                <p class="author"><%= post.author %></p>
+                <p class="date"><%= post.posted  %></p>  
+                <% if (user.admin) { %>
+                    <form action="/delete" method="post">
+                        <button type="submit" class="deleteBtn" name="delete" value='<%= post.id %>'>delete</button>
+                    </form>
+                    <% } %>
+            <% } else { %>
+                <p class="author blurred"><%= post.author %></p>
+                <p class="date blurred"><%= post.posted  %></p>  
+            <% } %>            
+        </div>
+    <% }) %> 
+</div>

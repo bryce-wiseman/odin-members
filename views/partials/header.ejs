@@ -1,0 +1,15 @@
+<div id="header">
+    <div id="branding">
+        <h1>Cul-De-Chat</h1>
+        <h4>(a neighborhood blog)</h4>
+    </div>
+    <div id="actions">
+        <% if (user) { %>
+            <button type="button" class="headerBtn"><a href="/new-post">New Post</a></button>
+            <button type="button" class="headerBtn"><a href="/log-out">Log Out</a></button>
+        <% } else { %>
+            <button type="button" class="headerBtn"><a href="/sign-up">Sign Up</a></button>
+            <button type="button" class="headerBtn"><a href="/log-in">Log In</a></button>
+        <% } %>
+    </div>
+</div>

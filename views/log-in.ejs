@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <% if (messages.error) { %>
+        <h6><%= messages.error %></h6>
+    <% } %>
+    <% if (user) { %>
+        <h1>WELCOME BACK <%= user.username %></h1>
+        <a href="/log-out">LOG OUT</a>
+        <% } else { %>
+            <div class="main-form">
+                <h1>Log In</h1>
+                <form action="/log-in" method="post">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username">
+            
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+            
+                    <button class="formBtn">Log In</button>
+                </form>
+                <br>
+                <p>Not signed up? <a href="/sign-up">Register</a></p>
+            </div>
+    <% } %>
+</body>
+</html>

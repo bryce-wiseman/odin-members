@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <form action="/new-post" method="post">
+        <label for="content">What's on your mind?</label>
+        <br>
+        <label for="title">Title</label>
+        <br>
+        <input type="text" name="title" id="title" placeholder="Post Title">
+        <textarea name="content" id="content" cols="30" rows="10" placeholder="write your post here..."></textarea>
+        <br>
+        <button>Post</button>
+    </form>
+</body>
+</html>

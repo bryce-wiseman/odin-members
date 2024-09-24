@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: hsl(12, 40%, 12%);
+    --color2: hsl(40, 10%, 90%);
+    --color3: hsl(15, 15%, 55%);
+    --lighten: hsla(40, 10%, 90%, 70%);
+}
+
+/* HEADER ELEMENTS */
+
+#header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+    background-color: var(--color1);
+    color: var(--color2);
+    height: 120px;
+}
+
+#actions {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.headerBtn {
+    border-radius: 10px;
+    border: 2px solid var(--color2);
+    padding: 5px 8px;
+}
+
+.headerBtn:hover {
+    background-color: var(--color3);
+}
+
+.headerBtn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color1);
+    width: 99%;
+}
+
+.headerBtn a:hover {
+    color: var(--color2);
+}
+
+/* BODY ELEMENTS */
+
+body {
+    background-color: var(--color3);
+}
+
+#main {
+    padding: 20px 40px;
+}
+
+.post {
+    height: 200px;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px var(--color1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--lighten);
+}
+
+.author {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.blurred {
+    filter: blur(5px);
+}
+
+.content {
+    font-size: 1.1rem;
+}
+
+.date {
+    font-size: 0.75rem;
+}
+
+/* LOG IN STYLES */
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.main-form h1 {
+    margin-bottom: 20px;
+    color: var(--color2);
+    text-shadow: 2px 2px 8px var(--color1);
+}
+
+.main-form p {
+    margin-top: 20px;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+.formBtn {
+    padding: 7px 15px;
+    background-color: var(--color1);
+    color: var(--color2);
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+.formBtn:hover {
+    background-color: var(--color2);
+    color: var(--color1);
+}
